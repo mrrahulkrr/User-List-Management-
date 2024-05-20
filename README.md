@@ -111,7 +111,7 @@ Add Users to the List via CSV
     ]
   }
 
-```
+
 **Send Email to the List**
 
 - **URL**: `/api/lists/:listId/send-email`
