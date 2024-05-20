@@ -67,48 +67,50 @@ npm test
     ]
   }
 
-Success Response:
-Code: 201
-Content:
-json
+**Success Response:**
+- **Code**: 201
+- **Content**:
   ```json
-{
-  "_id": "listId",
-  "title": "Test List",
-  "customProperties": [
-    { "title": "city", "fallback": "Unknown" }
-  ]
-}
-```
+  {
+    "_id": "listId",
+    "title": "Test List",
+    "customProperties": [
+      { "title": "city", "fallback": "Unknown" }
+    ]
+  }
+
 Add Users to the List via CSV
-URL: /api/lists/:listId/users
-Method: POST
-Form-Data:
-file: The CSV file containing users.
-Success Response:
-Code: 200
-Content:
-json
+- **URL**: `/api/lists/:listId/users`
+- **Method**: `POST`
+**Add Users to the List via CSV**
+
+- **Form-Data**:
+  - `file`: The CSV file containing users.
+
+**Success Response:**
+- **Code**: 200
+- **Content**:
   ```json
-{
-  "successCount": 2,
-  "errorCount": 0,
-  "errors": [],
-  "users": [
-    {
-      "_id": "userId",
-      "name": "John Doe",
-      "email": "john.doe@example.com",
-      "city": "Bengaluru"
-    },
-    {
-      "_id": "userId",
-      "name": "Jane Doe",
-      "email": "jane.doe@example.com",
-      "city": "Unknown"
-    }
-  ]
-}
+  {
+    "successCount": 2,
+    "errorCount": 0,
+    "errors": [],
+    "users": [
+      {
+        "_id": "userId",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "city": "Bengaluru"
+      },
+      {
+        "_id": "userId",
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "city": "Unknown"
+      }
+    ]
+  }
+
 ```
 Send Email to the List
 URL: /api/lists/:listId/send-email
@@ -142,7 +144,7 @@ json
   "message": "User unsubscribed"
 }
 ```
-Testing
+##Testing
 The project includes unit and integration tests using Mocha and Chai. To run the tests, use the following command:
 
 ```sh
