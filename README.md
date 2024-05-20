@@ -112,38 +112,38 @@ Add Users to the List via CSV
   }
 
 ```
-Send Email to the List
-URL: /api/lists/:listId/send-email
-Method: POST
-Body:
-json
+**Send Email to the List**
+
+- **URL**: `/api/lists/:listId/send-email`
+- **Method**: `POST`
+- **Body**:
   ```json
-{
-  "subject": "Welcome!",
-  "body": "Hey [name]!\n\nThank you for signing up with your email [email]. We have received your city as [city].\n\nTeam MathonGo."
-}
-```
-Success Response:
-Code: 200
-Content:
-json
+  {
+    "subject": "Welcome!",
+    "body": "Hey [name]!\n\nThank you for signing up with your email [email]. We have received your city as [city].\n\nTeam MathonGo."
+  }
+
+**Success Response:**
+- **Code**: 200
+- **Content**:
   ```json
-{
-  "count": 2
-}
-```
-Unsubscribe a User
-URL: /api/lists/:listId/unsubscribe/:userId
-Method: POST
-Success Response:
-Code: 200
-Content:
-json
+  {
+    "count": 2
+  }
+
+**Unsubscribe a User**
+
+- **URL**: `/api/lists/:listId/unsubscribe/:userId`
+- **Method**: `POST`
+
+**Success Response:**
+- **Code**: 200
+- **Content**:
   ```json
-{
-  "message": "User unsubscribed"
-}
-```
+  {
+    "message": "User unsubscribed"
+  }
+
 ##Testing
 The project includes unit and integration tests using Mocha and Chai. To run the tests, use the following command:
 
